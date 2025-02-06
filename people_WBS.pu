@@ -1,0 +1,16 @@
+@startwbs 券売機制作
+title 購入者券売機
+* 購入者
+**[#Aqua] 入力番号の受け取り
+***[#Yellow] キーボード入力の受け取り
+***[#Yellow]  商品番号判別
+**[#Aqua] 購入カウント
+***[#Yellow] 商品ごとの購入数
+**[#Aqua] お会計
+***[#Yellow] 合計計算
+***[#Yellow] 料金受け取り
+***[#Yellow] おつり計算
+**[#Aqua] 全体の文章
+***[#Yellow] 商品表示
+***[#Yellow] 結果表示
+@endwbs
