@@ -1,0 +1,15 @@
+@startwbs 券売機制作
+title 券売機全体
+* 券売機全体
+**[#Aqua] 入力受け取り
+***[#Yellow] キーボード入力
+**[#Aqua] タイトル画面
+***[#Yellow] 文章
+**[#Aqua] Enterキー
+***[#Yellow] 購入者画面へ
+**[#Aqua] Escキー
+***[#Yellow] 管理者画面へ
+***[#Yellow] 料金受け取り
+***[#Yellow] おつり計算
+
+@endwbs
