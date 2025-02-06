@@ -1,0 +1,43 @@
+@startuml 券売機シミュレーターを作る
+start
+fork 
+    :Please Enter;
+    fork
+        :Enter;
+    fork again    
+        :ESC;
+    fork again
+        :Q; 
+    end fork
+end fork
+fork
+    :購入者;
+    :商品表示;
+    fork
+        :入力番号の受け取り;
+        :商品番号判別;
+    fork again
+        :カウント;
+        :商品ごとの購入数;    
+    end fork
+        :会計;
+        :合計計算;
+        :料金受取;
+        :おつり計算;
+        :結果;
+fork again
+    :管理者;
+    :商品一覧;
+    fork
+        :売上リセット; 
+    fork again
+        :商品価格変更;
+    fork again
+        :管理画面終了;
+    end fork
+
+fork again
+    :終了;
+end fork
+stop
+@enduml
