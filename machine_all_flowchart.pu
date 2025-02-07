@@ -1,0 +1,13 @@
+@startuml
+start
+:タイトル画面表示;
+if (ESCキー押す) then (yes)
+  :管理画面へ移行;
+elseif (qキー押す) then (yes)
+  :シュミレーター終了;
+elseif (Enter押す) then (yes)
+  :利用者画面に進む;
+endif
+stop
+@enduml
+
