@@ -46,7 +46,7 @@ def code3_event(goods_name_list, goods_list, goods_count_list):
     if get_enter == "":
         # ここでメインに戻るーーーーー
         from Ticket_machine import main
-        main(goods_name_list, goods_list, goods_count_list)
+        main(goods_count_list)
 
 def print_goods(goods_name_list, goods_list, goods_count_list):
     print("======= 商品一覧 =======")
