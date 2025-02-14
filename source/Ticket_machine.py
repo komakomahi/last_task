@@ -82,3 +82,4 @@ def main(goods_name_list, goods_list, goods_count_list):
     if place_key == ord("q"):
         # fin
         exit()
+
