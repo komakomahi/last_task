@@ -3,7 +3,6 @@
 # goods_list = [180, 320, 500, 200]
 
 def sum_checkout(goods_name_list, goods_list, goods_count_list):
-    print(goods_count_list)
     all_sum_amount = 0
     for x in range(4):
         all_sum_amount += goods_list[x] * goods_count_list[x]
@@ -29,17 +28,20 @@ def code1_event(goods_name_list, goods_list, goods_count_list):
     print("売上をリセットしました。\n")
     
 def code2_event(goods_name_list, goods_list, goods_count_list):
-    print("===")
-    change_number = int(input("価格を変更する商品の番号を入力してください。 >"))
-    if change_number <= 0 or change_number > 4:
-        print("正しい商品番号を入力してください。\n")
+    if goods_count_list[0] + goods_count_list[1] + goods_count_list[2] + goods_count_list[3] == 0:
+        print("===")
+        change_number = int(input("価格を変更する商品の番号を入力してください。 >"))
+        if change_number <= 0 or change_number > 4:
+            print("正しい商品番号を入力してください。\n")
+        else:
+            change_amount = int(input("変更金額を入力してください。 >"))
+            print(f"【{goods_name_list[change_number - 1]}  {change_amount}】円に変更します。")
+            check_yn = input("よろしいですか（Y/N) >")
+            if check_yn.upper() == "Y":
+                goods_list[change_number - 1] = change_amount
+                print("変更しました。\n")
     else:
-        change_amount = int(input("変更金額を入力してください。 >"))
-        print(f"【{goods_name_list[change_number - 1]}  {change_amount}】円に変更します。")
-        check_yn = input("よろしいですか（Y/N) >")
-        if check_yn.upper() == "Y":
-            goods_list[change_number - 1] = change_amount
-            print("変更しました。\n")
+        print("売上をリセットしてください。")
             
 def code3_event(goods_name_list, goods_list, goods_count_list):
     get_enter = input("Enterキー押下でタイトル画面の表示に戻る\n")
@@ -67,7 +69,6 @@ def print_goods(goods_name_list, goods_list, goods_count_list):
     print("———")
     manager_code = int(input("管理コード入力:"))
 
-    # 不正な受け取りに対するエラー文も出せるようにしておこう！！
     manager_num(manager_code, goods_name_list, goods_list, goods_count_list)
     
 # 表示
