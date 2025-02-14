@@ -95,6 +95,6 @@ def main(goods_count_list):
         manager(goods_name_list, goods_list, goods_count_list)
     if place_key == ord("q"):
         # fin
-        pass
+        print('')
 
 main(goods_count_list)
